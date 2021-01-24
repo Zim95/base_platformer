@@ -1,7 +1,7 @@
 #!/bin/bash
 
 appRunning=1
-game=Tetris
+game=BasePlatformer
 
 while [ $appRunning == 1 ]; do
     echo Compile and run[1], Compile[2], Exit[3]
