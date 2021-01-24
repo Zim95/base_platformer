@@ -1,2 +1,2 @@
-# base_platformer
-Basic platformer for learning SFML and cpp
+# TIC TAC TOE
+Basic tictactoe for learning SFML and cpp

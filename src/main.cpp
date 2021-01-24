@@ -2,33 +2,37 @@
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
+#define GAME_TITLE "TicTacToe"
 
 int main() {
     // Create the main window.
-    // We are creating the app object.
-    sf::RenderWindow app(
+    // We are creating the window object.
+    sf::RenderWindow window(
         sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT),
-        "BasePlatformer"
+        GAME_TITLE
     );
 
-    // directions
-    bool up, down, right, left = false;
-
     // start the game loop
-    while(app.isOpen()) {
+    while(window.isOpen()) {
         // process events
         sf::Event event;
-        while(app.pollEvent(event)) {
-            // Close window: exit
-            if(event.type == sf::Event::Closed) {
-                app.close();
+        while(window.pollEvent(event)) {
+            // event switch
+            switch(event.type) {
+                case sf::Event::Closed:
+                    window.close();
+                    break;
+                default:
+                    break;
             }
         }
     }
 
     // clear window
-    app.clear();
+    window.clear();
 
     // update the window
-    app.display();
+    window.display();
+
+    return EXIT_SUCCESS;
 }
